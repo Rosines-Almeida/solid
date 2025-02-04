@@ -1,5 +1,6 @@
  
 import IndexAbstractFactory from "./Abstractfactory/notificationAbstractFactory";
+import IndexPaymentSytemAbstractFactory from "./Abstractfactory/paymentSytemAbstractFactory";
 import indexFactory from "./FactoryMethod/reportFactory";
 import IndexTransport from "./FactoryMethod/transportFactory";
 import IndexUserManager from "./SRP/user/exercicio_1/userManager";
@@ -22,3 +23,7 @@ console.log(transport.init('car'));
 
 const message = new IndexAbstractFactory()
 console.log(message.handleFamiliyAbastractMethos('email'))
+
+
+const paymentSytem = new IndexPaymentSytemAbstractFactory()
+console.log(paymentSytem.handleProcess('payPal'))

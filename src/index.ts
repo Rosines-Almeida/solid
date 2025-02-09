@@ -1,7 +1,8 @@
  
 import IndexAbstractFactory from "./Abstractfactory/notificationAbstractFactory";
 import IndexPaymentSytemAbstractFactory from "./Abstractfactory/paymentSytemAbstractFactory";
-import IndexTransportAbstractFactory from "./Abstractfactory/transportAbstractFactory";
+import IndexTransportAbstractFactory from "./Abstractfactory/transportAbstractFactory"; 
+import IndexServicePCBuilder from "./FactoryMethod/Builder/servicePcBuilder";
 import indexFactory from "./FactoryMethod/reportFactory";
 import IndexTransport from "./FactoryMethod/transportFactory";
 import IndexUserManager from "./SRP/user/exercicio_1/userManager";
@@ -30,4 +31,7 @@ const user = new IndexUserManager();
 // console.log(paymentSytem.handleProcess('payPal'))
 
 const transportAbstractFactory = new IndexTransportAbstractFactory();
-console.log(transportAbstractFactory.init('uber'));
+//console.log(transportAbstractFactory.init('uber'));
+
+const builder = new IndexServicePCBuilder()
+console.log(builder.init())

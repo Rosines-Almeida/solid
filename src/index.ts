@@ -3,6 +3,7 @@ import IndexAbstractFactory from "./Abstractfactory/notificationAbstractFactory"
 import IndexPaymentSytemAbstractFactory from "./Abstractfactory/paymentSytemAbstractFactory";
 import IndexTransportAbstractFactory from "./Abstractfactory/transportAbstractFactory"; 
 import IndexServicePCBuilder from "./FactoryMethod/Builder/servicePcBuilder";
+import IndexServicePCBuilderWithDirector from "./FactoryMethod/Builder/servicePCWithDirector";
 import indexFactory from "./FactoryMethod/reportFactory";
 import IndexTransport from "./FactoryMethod/transportFactory";
 import IndexUserManager from "./SRP/user/exercicio_1/userManager";
@@ -35,3 +36,6 @@ const transportAbstractFactory = new IndexTransportAbstractFactory();
 
 const builder = new IndexServicePCBuilder()
 console.log(builder.init())
+
+const builderWithDirector = new IndexServicePCBuilderWithDirector()
+console.log(builderWithDirector.init())

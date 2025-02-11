@@ -2,6 +2,7 @@
 import IndexAbstractFactory from "./Abstractfactory/notificationAbstractFactory";
 import IndexPaymentSytemAbstractFactory from "./Abstractfactory/paymentSytemAbstractFactory";
 import IndexTransportAbstractFactory from "./Abstractfactory/transportAbstractFactory"; 
+import IndexSystemTemperatureAdapter from "./Adapter/systemTemperature";
 import IndexSystemChargeAdapter from "./Adapter/sytemChargeAdpter";
 import IndexServicePCBuilder from "./Builder/servicePcBuilder";
 import IndexServicePCBuilderWithDirector from "./Builder/servicePCWithDirector";
@@ -43,3 +44,6 @@ const builderWithDirector = new IndexServicePCBuilderWithDirector()
 
 const adapterUSB = new IndexSystemChargeAdapter()
 console.log(adapterUSB.init())
+
+const adapterTemperature = new IndexSystemTemperatureAdapter()
+console.log(adapterTemperature.init())

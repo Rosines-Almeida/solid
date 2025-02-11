@@ -2,6 +2,8 @@
 import IndexAbstractFactory from "./Abstractfactory/notificationAbstractFactory";
 import IndexPaymentSytemAbstractFactory from "./Abstractfactory/paymentSytemAbstractFactory";
 import IndexTransportAbstractFactory from "./Abstractfactory/transportAbstractFactory"; 
+import IndexSystemTemperatureAdapter from "./Adapter/systemTemperature";
+import IndexSystemChargeAdapter from "./Adapter/sytemChargeAdpter";
 import IndexServicePCBuilder from "./Builder/servicePcBuilder";
 import IndexServicePCBuilderWithDirector from "./Builder/servicePCWithDirector";
 import indexFactory from "./FactoryMethod/reportFactory";
@@ -35,7 +37,13 @@ const transportAbstractFactory = new IndexTransportAbstractFactory();
 //console.log(transportAbstractFactory.init('uber'));
 
 const builder = new IndexServicePCBuilder()
-console.log(builder.init())
+//console.log(builder.init())
 
 const builderWithDirector = new IndexServicePCBuilderWithDirector()
-console.log(builderWithDirector.init())
+//console.log(builderWithDirector.init())
+
+const adapterUSB = new IndexSystemChargeAdapter()
+console.log(adapterUSB.init())
+
+const adapterTemperature = new IndexSystemTemperatureAdapter()
+console.log(adapterTemperature.init())

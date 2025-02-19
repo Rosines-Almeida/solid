@@ -1,10 +1,9 @@
- 
-import IndexAbstractFactory from "./Abstractfactory/notificationAbstractFactory";
+ import IndexAbstractFactory from "./Abstractfactory/notificationAbstractFactory";
 import IndexPaymentSytemAbstractFactory from "./Abstractfactory/paymentSytemAbstractFactory";
 import IndexTransportAbstractFactory from "./Abstractfactory/transportAbstractFactory"; 
-import IndexSystemPlatform from "./Adapter/Bridge/systemLiveStreaming";
-import IndexSytemNotificationBridge from "./Adapter/Bridge/systemNotification";
-import IndexSystemPaymentBridge from "./Adapter/Bridge/systemPaymentBridge";
+import IndexSystemPlatform from "./Bridge/systemLiveStreaming";
+import IndexSytemNotificationBridge from "./Bridge/systemNotification";
+import IndexSystemPaymentBridge from "./Bridge/systemPaymentBridge";
 import IndexSystemTemperatureAdapter from "./Adapter/systemTemperature";
 import IndexSystemChargeAdapter from "./Adapter/sytemChargeAdpter";
 import IndexServicePCBuilder from "./Builder/servicePcBuilder";

@@ -4,6 +4,7 @@ import IndexPaymentSytemAbstractFactory from "./Abstractfactory/paymentSytemAbst
 import IndexTransportAbstractFactory from "./Abstractfactory/transportAbstractFactory"; 
 import IndexSystemPlatform from "./Adapter/Bridge/systemLiveStreaming";
 import IndexSytemNotificationBridge from "./Adapter/Bridge/systemNotification";
+import IndexSystemPaymentBridge from "./Adapter/Bridge/systemPaymentBridge";
 import IndexSystemTemperatureAdapter from "./Adapter/systemTemperature";
 import IndexSystemChargeAdapter from "./Adapter/sytemChargeAdpter";
 import IndexServicePCBuilder from "./Builder/servicePcBuilder";
@@ -55,3 +56,6 @@ console.log(systemPaymentBridge.init())
 
 const systemLiveStreaming = new IndexSystemPlatform()
 console.log(systemLiveStreaming.init())
+
+const systemLiveStreamingtBridge = new IndexSystemPaymentBridge()
+console.log(systemLiveStreamingtBridge.init())

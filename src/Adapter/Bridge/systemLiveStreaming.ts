@@ -19,6 +19,7 @@
 //Cliente
 //a asbtração é feita pela implemnetação
 //instancia a abstração e passa a implementação 
+//neste Exemplo a classe de implementação tem un construtor, por isso a classe abstract não precisou fazer a ponte 
 
 interface IPlatform{
     setUp(): void
@@ -26,9 +27,9 @@ interface IPlatform{
 }
 
 class YouTube implements IPlatform{
-    // constructor(){
-    //     this.setUp()
-    // }
+    constructor(){
+        this.setUp()
+    }
     setUp(): void {
        console.log('YouTube-> config inicial')
        this.authToke()

@@ -2,6 +2,9 @@
 import IndexAbstractFactory from "./Abstractfactory/notificationAbstractFactory";
 import IndexPaymentSytemAbstractFactory from "./Abstractfactory/paymentSytemAbstractFactory";
 import IndexTransportAbstractFactory from "./Abstractfactory/transportAbstractFactory"; 
+import IndexSystemPlatform from "./Adapter/Bridge/systemLiveStreaming";
+import IndexSytemNotificationBridge from "./Adapter/Bridge/systemNotification";
+import IndexSystemPaymentBridge from "./Adapter/Bridge/systemPaymentBridge";
 import IndexSystemTemperatureAdapter from "./Adapter/systemTemperature";
 import IndexSystemChargeAdapter from "./Adapter/sytemChargeAdpter";
 import IndexServicePCBuilder from "./Builder/servicePcBuilder";
@@ -47,3 +50,12 @@ console.log(adapterUSB.init())
 
 const adapterTemperature = new IndexSystemTemperatureAdapter()
 console.log(adapterTemperature.init())
+
+const systemPaymentBridge = new IndexSytemNotificationBridge('sms', 'promo')
+console.log(systemPaymentBridge.init())
+
+const systemLiveStreaming = new IndexSystemPlatform()
+console.log(systemLiveStreaming.init())
+
+const systemLiveStreamingtBridge = new IndexSystemPaymentBridge()
+console.log(systemLiveStreamingtBridge.init())

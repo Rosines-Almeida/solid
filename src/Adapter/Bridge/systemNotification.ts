@@ -11,7 +11,7 @@
 //criar as class concretas que usam a interface
 
 //Para abastação
-//criar classe abstrata com construtor 
+//criar classe abstrata com construtor (liga os dois pontos)
 //criar as classes concretas que usam a abstração
 
 //Cliente
@@ -26,42 +26,32 @@ class Email implements Midia{
     send(message:string) {
        console.log('envio por email',message);
     }
-
 }
 
 class SMS implements Midia{
     send(message:string) {
         console.log('enviando por sms', message);
     }
-
 }
 
 abstract class Notification{
         midia: Midia
         constructor( midia: Midia){
             this.midia = midia
-
         }
-
        abstract sendNotification(message:string) : void
-
-
 }
 
 class MessageAlerta extends Notification{
-
     sendNotification(message: string): void {
         this.midia.send('Alerta: Ultimo dia para pagar o boleto')
-        
     }
-
 }
 
 class MessagePromotion extends Notification{
     sendNotification(message: string): void {
        this.midia.send('Vários produtos com desconto, corre')
     }
-
 }
 
 export default class IndexSytemNotificationBridge{
@@ -74,8 +64,7 @@ export default class IndexSytemNotificationBridge{
     }
 
     init( ){
-
-        let  midia : Midia; 
+        let midia : Midia; 
         let notification : Notification; 
 
         switch(this.type){

@@ -11,7 +11,9 @@ import IndexServicePCBuilderWithDirector from "./Builder/servicePCWithDirector";
 import indexFactory from "./FactoryMethod/reportFactory";
 import IndexTransport from "./FactoryMethod/transportFactory";
 import IndexUserManager from "./SRP/user/exercicio_1/userManager";
-
+import IndexChainAuthetication from "./Chain/authenticationChain";
+import IndexSystemAprover from "./Chain/systemAproverWithChain";
+ 
 const curso: string = 'TypeScript 9';
 
 console.log(`Curso de ${curso}`);
@@ -35,26 +37,34 @@ const user = new IndexUserManager();
 // const paymentSytem = new IndexPaymentSytemAbstractFactory()
 // console.log(paymentSytem.handleProcess('payPal'))
 
-const transportAbstractFactory = new IndexTransportAbstractFactory();
+// const transportAbstractFactory = new IndexTransportAbstractFactory();
 //console.log(transportAbstractFactory.init('uber'));
 
-const builder = new IndexServicePCBuilder()
+// const builder = new IndexServicePCBuilder()
 //console.log(builder.init())
 
-const builderWithDirector = new IndexServicePCBuilderWithDirector()
+// const builderWithDirector = new IndexServicePCBuilderWithDirector()
 //console.log(builderWithDirector.init())
 
-const adapterUSB = new IndexSystemChargeAdapter()
-console.log(adapterUSB.init())
+// const adapterUSB = new IndexSystemChargeAdapter()
+// console.log(adapterUSB.init())
 
-const adapterTemperature = new IndexSystemTemperatureAdapter()
-console.log(adapterTemperature.init())
+// const adapterTemperature = new IndexSystemTemperatureAdapter()
+// console.log(adapterTemperature.init())
 
-const systemPaymentBridge = new IndexSytemNotificationBridge('sms', 'promo')
-console.log(systemPaymentBridge.init())
+// const systemPaymentBridge = new IndexSytemNotificationBridge('sms', 'promo')
+// console.log(systemPaymentBridge.init())
 
-const systemLiveStreaming = new IndexSystemPlatform()
-console.log(systemLiveStreaming.init())
+// const systemLiveStreaming = new IndexSystemPlatform()
+// console.log(systemLiveStreaming.init())
 
-const systemLiveStreamingtBridge = new IndexSystemPaymentBridge()
-console.log(systemLiveStreamingtBridge.init())
+// const systemLiveStreamingtBridge = new IndexSystemPaymentBridge()
+// console.log(systemLiveStreamingtBridge.init())
+
+
+// const indexChainAuthentication = new IndexChainAuthetication()
+//  console.log(indexChainAuthentication.init())
+
+
+ const systemAproverChain = new IndexSystemAprover();
+ console.log(systemAproverChain.init())
